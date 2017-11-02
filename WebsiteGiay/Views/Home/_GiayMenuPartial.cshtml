@@ -9,20 +9,15 @@
             
             <div class="col-sm-3 multi-gd-img">
                 <ul class="multi-column-dropdown">
-                    @{ int i = 0;}
+                    
                     @foreach (var item in Model)
                     {
-                        i++;
                         <li><a href="#">@item.TenLoai</a></li>
                         @*<p><a href="@Url.Action("#", "#", new { @maLoaiGiay=item.MaLoai })" class="aCacHD">@item.TenLoai</a></p>*@
                         
                     }
                     
                 </ul>
-                @{if (i % 5 == 0)
-                {
-                    <div style="clear:both"></div>
-                }}
             </div>
             @*<div class="col-sm-3 multi-gd-img">
                 <ul class="multi-column-dropdown">

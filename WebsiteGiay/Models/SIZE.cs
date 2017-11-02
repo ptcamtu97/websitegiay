@@ -14,8 +14,9 @@ namespace WebsiteGiay.Models
     
     public partial class SIZE
     {
-        public int Size1 { get; set; }
-        public int MaGiay { get; set; }
+        public int MaSize { get; set; }
+        public string Size1 { get; set; }
+        public Nullable<int> MaGiay { get; set; }
     
         public virtual GIAY GIAY { get; set; }
     }

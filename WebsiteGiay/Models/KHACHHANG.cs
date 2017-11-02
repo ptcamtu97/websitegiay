@@ -14,15 +14,17 @@ namespace WebsiteGiay.Models
     
     public partial class KHACHHANG
     {
-        public string TenDN { get; set; }
-        public string MatKhau { get; set; }
+        public KHACHHANG()
+        {
+            this.HOADONs = new HashSet<HOADON>();
+        }
+    
+        public int MaKH { get; set; }
         public string HoTen { get; set; }
-        public Nullable<System.DateTime> NgaySinh { get; set; }
-        public bool GioiTinh { get; set; }
-        public string DiaChi { get; set; }
         public string SDT { get; set; }
+        public string DiaChi { get; set; }
         public string Email { get; set; }
-        public Nullable<System.DateTime> NgayDK { get; set; }
-        public Nullable<int> PhanQuyen { get; set; }
+    
+        public virtual ICollection<HOADON> HOADONs { get; set; }
     }
 }

@@ -25,5 +25,6 @@ namespace WebsiteGiay.Models
         public Nullable<bool> Duyet { get; set; }
     
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
+        public virtual KHACHHANG KHACHHANG { get; set; }
     }
 }

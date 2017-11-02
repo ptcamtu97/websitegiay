@@ -38,5 +38,16 @@ namespace WebsiteGiay.Controllers
             return PartialView(lstHinhFooter);
         }
         
+        public PartialViewResult _GiayBBPartial()
+        {
+            var lstGiay = db.GIAYs.OrderBy(n => n.NgayCapNhat).Take(3).ToList();
+            return PartialView(lstGiay);
+        }
+        public PartialViewResult _GiayBupBePartial()
+        {
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GBB").Take(4).ToList();
+            return PartialView(lstGiay);
+        }
+        
     }
 }

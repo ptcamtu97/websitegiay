@@ -166,25 +166,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AspNetRole.cs">
-      <DependentUpon>QLGIAY.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>QLGIAY.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>QLGIAY.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>QLGIAY.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\BAIVIET.cs">
       <DependentUpon>QLGIAY.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CTHOADON.cs">
-      <DependentUpon>QLGIAY.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>QLGIAY.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GIAY.cs">
@@ -490,6 +475,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\_GiayMenuPartial.cshtml" />
     <Content Include="Views\Home\_NewGiayFooterPartial.cshtml" />
+    <Content Include="Views\Home\_GiayBBPartial.cshtml" />
+    <Content Include="Views\Home\_GiayBupBePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

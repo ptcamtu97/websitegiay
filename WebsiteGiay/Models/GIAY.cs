@@ -23,10 +23,10 @@ namespace WebsiteGiay.Models
         public int MaGiay { get; set; }
         public string MaLoai { get; set; }
         public string TenGiay { get; set; }
-        public Nullable<int> SoLuong { get; set; }
         public Nullable<double> DonGia { get; set; }
         public string MoTa { get; set; }
         public Nullable<System.DateTime> NgayCapNhat { get; set; }
+        public string HinhMinhHoa { get; set; }
     
         public virtual ICollection<HINHSP> HINHSPs { get; set; }
         public virtual LOAIGIAY LOAIGIAY { get; set; }
