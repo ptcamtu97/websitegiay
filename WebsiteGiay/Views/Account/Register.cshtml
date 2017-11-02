@@ -5,11 +5,20 @@
 
 <link href="~/Content/DangKy.css" rel="stylesheet" />
 
-<h2>@ViewBag.Title</h2>
+<style>
+    .form-horizontal {
+        margin: 10px auto;
+        width: 80%;
+    }
+</style>
+
+
+
 
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
+    <h2>@ViewBag.Title</h2>
     @Html.AntiForgeryToken()
     <h4>Tạo một tài khoản mới.</h4>
     <hr />

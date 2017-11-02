@@ -1,0 +1,12 @@
+﻿
+@using WebsiteGiay.Models
+@model List<HINHSP>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="#">@item.TenHinh</a></li>
+        @*<p><a href="@Url.Action("#", "#", new { @maLoaiGiay=item.MaLoai })" class="aCacHD">@item.TenLoai</a></p>*@
+
+    }
+</ul>

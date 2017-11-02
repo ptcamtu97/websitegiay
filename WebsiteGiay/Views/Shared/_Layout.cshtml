@@ -77,40 +77,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav menu__list">
-                                            <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                                            <li class="active menu__item menu__item--current"><a class="menu__link" href="../Home/Index">Trang chủ <span class="sr-only">(current)</span></a></li>
                                             
                                             <li class="dropdown menu__item">
-                                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
-                                                <ul class="dropdown-menu multi-column columns-3">
-                                                    <div class="agile_inner_drop_nav_info">
-                                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                            <a href="mens.html"><img src="images/top2.jpg" alt=" " /></a>
-                                                        </div>
-                                                        <div class="col-sm-3 multi-gd-img">
-                                                            <ul class="multi-column-dropdown">
-                                                                <li><a href="mens.html">Clothing</a></li>
-                                                                <li><a href="mens.html">Wallets</a></li>
-                                                                <li><a href="mens.html">Footwear</a></li>
-                                                                <li><a href="mens.html">Watches</a></li>
-                                                                <li><a href="mens.html">Accessories</a></li>
-                                                                <li><a href="mens.html">Bags</a></li>
-                                                                <li><a href="mens.html">Caps & Hats</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-3 multi-gd-img">
-                                                            <ul class="multi-column-dropdown">
-                                                                <li><a href="mens.html">Jewellery</a></li>
-                                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                                <li><a href="mens.html">Perfumes</a></li>
-                                                                <li><a href="mens.html">Beauty</a></li>
-                                                                <li><a href="mens.html">Shirts</a></li>
-                                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                                <li><a href="mens.html">Swimwear</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="clearfix"></div>
-                                                    </div>
-                                                </ul>
+                                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giày <span class="caret"></span></a>
+                                               
+                                                @Html.Action("_GiayMenuPartial","Home")
                                             </li>
                                             
                                             <li class="menu__item dropdown">
@@ -120,21 +92,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <li><a href="typography.html">Typography</a></li>
                                                 </ul>
                                             </li>
-                                            <li>@Html.Partial("_LoginPartial")</li>
+                                            <li class=" menu__item"><a class="menu__link" href="contact.html">Tin tức</a></li>
+                                            <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
+                                            <li>
+                                                <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                                                    <form action="#" method="post" class="last">
+                                                        <input type="hidden" name="cmd" value="_cart">
+                                                        <input type="hidden" name="display" value="1">
+                                                        <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                                                    </form>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </nav>
                         </div>
                         <div class="top_nav_right">
-                            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                                <form action="#" method="post" class="last">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="display" value="1">
-                                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-                                </form>
-
-                            </div>
+                            @Html.Partial("_LoginPartial")
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -142,8 +117,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
         </div>
-
-
 
     <!-- header-bot -->
     <div class="header-bot">
@@ -195,16 +168,211 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //header-bot -->
 
 
-    <div class="container body-content">
+    @* css div body class="container body-content" *@
+    <div class="">
         @RenderBody()
-        <hr />
+        @*<hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Cẩm Tú-Thu Nga</p>
-        </footer>
+        </footer>*@
     </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer_agile_inner_info_w3l">
+            <div class="col-md-3 footer-left">
+                <h2><a href="index.html"><span>T&N</span>Shoes</a></h2>
+                <p>
+                    Cuộc đời tôi vốn là một đường thẳng
+                    chỉ vì gặp T&N
+                    mà rẽ ngang.
+                </p>
+                <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+                    <li>
+                        <a href="#" class="facebook">
+                            <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="instagram">
+                            <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="pinterest">
+                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9 footer-right">
+                <div class="sign-grds">
+                    <div class="col-md-4 sign-gd">
+                        <h4>T&N <span>Shoes</span> </h4>
+                        <ul>
+                            <li><a href="Home/Index">Trang chủ</a></li>
+                            <li><a href="#">Giày</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Giỏ hàng</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 sign-gd-two">
+                        <h4>T&N <span>Thông tin liên hệ</span></h4>
+                        <div class="w3-address">
+                            <div class="w3-address-grid">
+                                <div class="w3-address-left">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3-address-right">
+                                    <h6>Số điện thoại</h6>
+                                    <p>01647002874</p>
+                                    <p>01695856317 (Ms.Nga)</p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="w3-address-grid">
+                                <div class="w3-address-left">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3-address-right">
+                                    <h6>Địa chỉ email</h6>
+                                    <p>Email :<a href="mailto:websitecamtu@gmail.com"> websitecamtu@gmail.com</a></p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="w3-address-grid">
+                                <div class="w3-address-left">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3-address-right">
+                                    <h6>Địa chỉ</h6>
+                                    <p>
+                                        Số 6, Trần Văn Ơn, phường Phú Hòa, Thủ Dầu Một, Bình Dương .
+
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 sign-gd flickr-post">
+                        <h4>New <span>Giày</span></h4>
+                        @Html.Partial("_NewGiayFooterPartial")
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="agile_newsletter_footer">
+                <div class="col-sm-6 newsleft">
+                    <h3>ĐĂNG KÝ ĐỂ TRỞ THÀNH THÀNH VIÊN !</h3>
+                </div>
+                <div class="col-sm-6 newsright">
+                    <form action="#" method="post">
+                        @*<input type="email" placeholder="Enter your email..." name="email" required="">*@
+                        <input type="submit" value="Đăng ký">
+                    </form>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <p class="copy-right">&copy; @DateTime.Now.Year T&N Shoes. All rights reserved | Thiết kế bởi <a href="#">Cẩm Tú - Thu Nga</a></p>
+        </div>
+    </div>
+    <!-- //footer -->
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <script src="js/modernizr.custom.js"></script>
+    <!-- Custom-JavaScript-File-Links -->
+    <!-- cart-js -->
+    <script src="js/minicart.min.js"></script>
+    <script>
+        // Mini Cart
+        paypal.minicart.render({
+            action: '#'
+        });
+
+        if (~window.location.search.indexOf('reset=true')) {
+            paypal.minicart.reset();
+        }
+    </script>
+
+    <!-- //cart-js -->
+    <!-- script for responsive tabs -->
+    <script src="js/easy-responsive-tabs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true,   // 100% fit in a container
+                closed: 'accordion', // Start closed if in accordion view
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+            $('#verticalTab').easyResponsiveTabs({
+                type: 'vertical',
+                width: 'auto',
+                fit: true
+            });
+        });
+    </script>
+    <!-- //script for responsive tabs -->
+    <!-- stats -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <!-- //stats -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
 </body>
 </html>

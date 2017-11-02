@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -164,7 +166,67 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BAIVIET.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTHOADON.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GIAY.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HINH.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HINHSP.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HOADON.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KHACHHANG.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOAIGIAY.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHANVIEN.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLGIAY.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGIAY.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLGIAY.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLGIAY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGIAY.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIZE.cs">
+      <DependentUpon>QLGIAY.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -178,7 +240,6 @@
     <Content Include="Content\css\jquery-ui.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\team.css" />
-    <Content Include="Content\DangKy.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\1.png" />
@@ -270,6 +331,98 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\imgGiay\adidas_size.png" />
+    <Content Include="Images\imgGiay\bb1.jpg" />
+    <Content Include="Images\imgGiay\bb10.jpg" />
+    <Content Include="Images\imgGiay\bb11.jpg" />
+    <Content Include="Images\imgGiay\bb12.jpg" />
+    <Content Include="Images\imgGiay\bb13.jpg" />
+    <Content Include="Images\imgGiay\bb14.jpg" />
+    <Content Include="Images\imgGiay\bb1_1.jpg" />
+    <Content Include="Images\imgGiay\bb1_2.jpg" />
+    <Content Include="Images\imgGiay\bb1_3.jpg" />
+    <Content Include="Images\imgGiay\bb2.1.jpg" />
+    <Content Include="Images\imgGiay\bb2.2.jpg" />
+    <Content Include="Images\imgGiay\bb2.3.jpg" />
+    <Content Include="Images\imgGiay\bb2.jpg" />
+    <Content Include="Images\imgGiay\bb3.jpg" />
+    <Content Include="Images\imgGiay\bb4.jpg" />
+    <Content Include="Images\imgGiay\bb5.jpg" />
+    <Content Include="Images\imgGiay\bb6.jpg" />
+    <Content Include="Images\imgGiay\bb7.jpg" />
+    <Content Include="Images\imgGiay\bb8.jpg" />
+    <Content Include="Images\imgGiay\bb9.jpg" />
+    <Content Include="Images\imgGiay\bt1.jpg" />
+    <Content Include="Images\imgGiay\bt10.1.jpg" />
+    <Content Include="Images\imgGiay\bt10.2.png" />
+    <Content Include="Images\imgGiay\bt10.jpg" />
+    <Content Include="Images\imgGiay\bt11.1.jpg" />
+    <Content Include="Images\imgGiay\bt11.jpg" />
+    <Content Include="Images\imgGiay\bt12.1.jpg" />
+    <Content Include="Images\imgGiay\bt12.2.jpg" />
+    <Content Include="Images\imgGiay\bt12.3.jpg" />
+    <Content Include="Images\imgGiay\bt12.jpg" />
+    <Content Include="Images\imgGiay\bt13.1.jpg" />
+    <Content Include="Images\imgGiay\bt13.jpg" />
+    <Content Include="Images\imgGiay\bt2.1.jpg" />
+    <Content Include="Images\imgGiay\bt2.2.jpg" />
+    <Content Include="Images\imgGiay\bt2.3.jpeg" />
+    <Content Include="Images\imgGiay\bt2.4.jpg" />
+    <Content Include="Images\imgGiay\bt2.jpg" />
+    <Content Include="Images\imgGiay\bt3.jpg" />
+    <Content Include="Images\imgGiay\bt4.1.jpg" />
+    <Content Include="Images\imgGiay\bt4.jpg" />
+    <Content Include="Images\imgGiay\bt5.jpg" />
+    <Content Include="Images\imgGiay\bt6.jpg" />
+    <Content Include="Images\imgGiay\bt7.1.jpg" />
+    <Content Include="Images\imgGiay\bt7.2.jpeg" />
+    <Content Include="Images\imgGiay\bt7.jpg" />
+    <Content Include="Images\imgGiay\bt8.jpg" />
+    <Content Include="Images\imgGiay\bt9.jpg" />
+    <Content Include="Images\imgGiay\cg1.jpg" />
+    <Content Include="Images\imgGiay\cg10.1.jpg" />
+    <Content Include="Images\imgGiay\cg10.2.jpg" />
+    <Content Include="Images\imgGiay\cg10.3.jpg" />
+    <Content Include="Images\imgGiay\cg10.jpg" />
+    <Content Include="Images\imgGiay\cg11.1.PNG" />
+    <Content Include="Images\imgGiay\cg11.jpg" />
+    <Content Include="Images\imgGiay\cg12.1.jpg" />
+    <Content Include="Images\imgGiay\cg12.jpg" />
+    <Content Include="Images\imgGiay\cg13.PNG" />
+    <Content Include="Images\imgGiay\cg14.1.jpg" />
+    <Content Include="Images\imgGiay\cg14.jpg" />
+    <Content Include="Images\imgGiay\cg2.jpg" />
+    <Content Include="Images\imgGiay\cg3.jpg" />
+    <Content Include="Images\imgGiay\cg4.jpg" />
+    <Content Include="Images\imgGiay\cg5.png" />
+    <Content Include="Images\imgGiay\cg6.1.jpg" />
+    <Content Include="Images\imgGiay\cg6.jpg" />
+    <Content Include="Images\imgGiay\cg7.jpg" />
+    <Content Include="Images\imgGiay\cg8.1.jpg" />
+    <Content Include="Images\imgGiay\cg8.jpg" />
+    <Content Include="Images\imgGiay\cg9.png" />
+    <Content Include="Images\imgGiay\lo-dien-7-doi-giay-sneake-duoc-san-don-khung-khiep-dau-nam-2017-1af3a58a636192337072118848.jpg" />
+    <Content Include="Images\imgGiay\sd1.jpg" />
+    <Content Include="Images\imgGiay\sd10.1.jpg" />
+    <Content Include="Images\imgGiay\sd10.2.jpg" />
+    <Content Include="Images\imgGiay\sd10.jpg" />
+    <Content Include="Images\imgGiay\sd11.1.jpg" />
+    <Content Include="Images\imgGiay\sd11.2.jpg" />
+    <Content Include="Images\imgGiay\sd11.3.jpg" />
+    <Content Include="Images\imgGiay\sd11.jpg" />
+    <Content Include="Images\imgGiay\sd2.jpg" />
+    <Content Include="Images\imgGiay\sd3.1.jpg" />
+    <Content Include="Images\imgGiay\sd3.jpg" />
+    <Content Include="Images\imgGiay\sd4.1.jpg" />
+    <Content Include="Images\imgGiay\sd4.jpg" />
+    <Content Include="Images\imgGiay\sd5.jpg" />
+    <Content Include="Images\imgGiay\sd6.jpg" />
+    <Content Include="Images\imgGiay\sd7.1.jpg" />
+    <Content Include="Images\imgGiay\sd7.jpg" />
+    <Content Include="Images\imgGiay\sd8.1.jpg" />
+    <Content Include="Images\imgGiay\sd8.2.jpg" />
+    <Content Include="Images\imgGiay\sd8.jpg" />
+    <Content Include="Images\imgGiay\sd9.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
@@ -281,6 +434,23 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <EntityDeploy Include="Models\QLGIAY.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLGIAY.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QLGIAY.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLGIAY.edmx</DependentUpon>
+      <LastGenOutput>QLGIAY.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\QLGIAY.edmx.diagram">
+      <DependentUpon>QLGIAY.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QLGIAY.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLGIAY.edmx</DependentUpon>
+      <LastGenOutput>QLGIAY.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -318,6 +488,8 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\_GiayMenuPartial.cshtml" />
+    <Content Include="Views\Home\_NewGiayFooterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +500,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
