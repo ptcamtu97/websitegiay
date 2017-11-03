@@ -34,7 +34,7 @@ namespace WebsiteGiay.Controllers
         }
         public PartialViewResult _NewGiayFooterPartial()
         {
-            var lstHinhFooter = db.HINHSPs.Take(9).ToList();
+            var lstHinhFooter = db.GIAYs.Take(9).ToList();
             return PartialView(lstHinhFooter);
         }
         
@@ -47,6 +47,11 @@ namespace WebsiteGiay.Controllers
         {
             var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GBB").Take(4).ToList();
             return PartialView(lstGiay);
+        }
+        public ActionResult CTSanPham(int maGiay)
+        {
+            GIAY giay = db.GIAYs.SingleOrDefault(n => n.MaGiay == maGiay);
+            return View(giay);
         }
         
     }

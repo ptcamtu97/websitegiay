@@ -11,7 +11,7 @@
                         <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-back">
                         <div class="men-cart-pro">
                             <div class="inner-men-cart-pro">
-                                <a href="single.html" class="link-product-add-cart">Xem nhanh</a>
+                                <a href="@Url.Action("CTSanPham", new { @maGiay=item.MaGiay })" class="link-product-add-cart">Xem nhanh</a>
                             </div>
                         </div>
                         <span class="product-new-top">New</span>
@@ -20,7 +20,7 @@
                     <div class="item-info-product ">
                         <h4><a href="single.html">@item.TenGiay</a></h4>
                         <div class="info-product-price">
-                            <span class="item_price">@item.DonGia</span>
+                            <span class="item_price">@item.DonGia VNĐ</span>
                             @*<del>$69.71</del>*@
                         </div>
                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">

@@ -477,6 +477,8 @@
     <Content Include="Views\Home\_NewGiayFooterPartial.cshtml" />
     <Content Include="Views\Home\_GiayBBPartial.cshtml" />
     <Content Include="Views\Home\_GiayBupBePartial.cshtml" />
+    <Content Include="Views\Home\CTSanPham.cshtml" />
+    <Content Include="Views\Home\_imgGiayPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
