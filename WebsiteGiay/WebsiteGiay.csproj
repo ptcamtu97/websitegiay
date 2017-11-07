@@ -475,9 +475,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\_GiayMenuPartial.cshtml" />
     <Content Include="Views\Home\_NewGiayFooterPartial.cshtml" />
-    <Content Include="Views\Home\_GiayBBPartial.cshtml" />
     <Content Include="Views\Home\_GiayBupBePartial.cshtml" />
     <Content Include="Views\Home\CTSanPham.cshtml" />
+    <Content Include="Views\Home\_GiayTheThaoPartial.cshtml" />
+    <Content Include="Views\Home\_GiayCaoGotPartial.cshtml" />
+    <Content Include="Views\Home\_GiaySandalsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

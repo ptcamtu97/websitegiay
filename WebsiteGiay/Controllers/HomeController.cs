@@ -38,14 +38,25 @@ namespace WebsiteGiay.Controllers
             return PartialView(lstHinhFooter);
         }
         
-        public PartialViewResult _GiayBBPartial()
-        {
-            var lstGiay = db.GIAYs.OrderBy(n => n.NgayCapNhat).Take(3).ToList();
-            return PartialView(lstGiay);
-        }
         public PartialViewResult _GiayBupBePartial()
         {
-            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GBB").Take(4).ToList();
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GBB").ToList();
+            return PartialView(lstGiay);
+        }
+
+        public PartialViewResult _GiayTheThaoPartial()
+        {
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GTT").ToList();
+            return PartialView(lstGiay);
+        }
+        public PartialViewResult _GiayCaoGotPartial()
+        {
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GCG").ToList();
+            return PartialView(lstGiay);
+        }
+        public PartialViewResult _GiaySandalsPartial()
+        {
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GSD").ToList();
             return PartialView(lstGiay);
         }
         public ActionResult CTSanPham(int maGiay)
