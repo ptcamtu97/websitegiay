@@ -3,17 +3,15 @@
 
 
 <style>
-    #divSPTrangChu {
-        margin: 10px 0px;
-    }
+   
 </style>
 
 
 <div class="tab3">
+@foreach (var item in Model)
+{
     <div class="col-md-3 product-men">
         <div class="men-pro-item sismpleCart_shelfItem">
-            @foreach (var item in Model)
-            {
                 <div class="men-thumb-item">
                     <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-front">
                     <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-back">
@@ -27,7 +25,7 @@
                 </div>
 
                 <div class="item-info-product ">
-                    <h4><a href="single.html">@item.TenGiay</a></h4>
+                    <h4><a href="@Url.Action("CTSanPham", new { @maGiay=item.MaGiay })">@item.TenGiay</a></h4>
                     <div class="info-product-price">
                         <span class="item_price">@item.DonGia VNĐ</span>
                         @*<del>$69.71</del>*@
@@ -50,8 +48,8 @@
                             </form>
                         </div>*@
                 </div>
-            }
         </div>
     </div>
     <div class=""></div>
+}
 </div>

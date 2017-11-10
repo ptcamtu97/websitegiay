@@ -161,6 +161,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -194,6 +196,7 @@
     <Compile Include="Models\NHANVIEN.cs">
       <DependentUpon>QLGIAY.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\NhanVienModel.cs" />
     <Compile Include="Models\QLGIAY.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -216,6 +219,66 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContentAdmin\css\basictable.css" />
+    <Content Include="ContentAdmin\css\bootstrap.min.css" />
+    <Content Include="ContentAdmin\css\font-awesome.css" />
+    <Content Include="ContentAdmin\css\icon-font.min.css" />
+    <Content Include="ContentAdmin\css\jqcandlestick.css" />
+    <Content Include="ContentAdmin\css\jquery-ui.css" />
+    <Content Include="ContentAdmin\css\lightbox.css" />
+    <Content Include="ContentAdmin\css\monthly.css" />
+    <Content Include="ContentAdmin\css\morris.css" />
+    <Content Include="ContentAdmin\css\style.css" />
+    <Content Include="ContentAdmin\css\table-style.css" />
+    <Content Include="ContentAdmin\fonts\fontawesome-webfont.svg" />
+    <Content Include="ContentAdmin\images\close.png" />
+    <Content Include="ContentAdmin\images\closew.gif" />
+    <Content Include="ContentAdmin\images\cross.png" />
+    <Content Include="ContentAdmin\images\g1.jpg" />
+    <Content Include="ContentAdmin\images\g2.jpg" />
+    <Content Include="ContentAdmin\images\g3.jpg" />
+    <Content Include="ContentAdmin\images\g4.jpg" />
+    <Content Include="ContentAdmin\images\g5.jpg" />
+    <Content Include="ContentAdmin\images\g6.jpg" />
+    <Content Include="ContentAdmin\images\g7.jpg" />
+    <Content Include="ContentAdmin\images\g8.jpg" />
+    <Content Include="ContentAdmin\images\g9.jpg" />
+    <Content Include="ContentAdmin\images\grid.png" />
+    <Content Include="ContentAdmin\images\icon_sprite.png" />
+    <Content Include="ContentAdmin\images\in.jpg" />
+    <Content Include="ContentAdmin\images\in1.jpg" />
+    <Content Include="ContentAdmin\images\in10.jpg" />
+    <Content Include="ContentAdmin\images\in11.jpg" />
+    <Content Include="ContentAdmin\images\in2.jpg" />
+    <Content Include="ContentAdmin\images\in3.jpg" />
+    <Content Include="ContentAdmin\images\in4.jpg" />
+    <Content Include="ContentAdmin\images\in5.jpg" />
+    <Content Include="ContentAdmin\images\in6.jpg" />
+    <Content Include="ContentAdmin\images\in7.jpg" />
+    <Content Include="ContentAdmin\images\in8.jpg" />
+    <Content Include="ContentAdmin\images\in9.jpg" />
+    <Content Include="ContentAdmin\images\leftw.gif" />
+    <Content Include="ContentAdmin\images\next.png" />
+    <Content Include="ContentAdmin\images\phon.png" />
+    <Content Include="ContentAdmin\images\prev.png" />
+    <Content Include="ContentAdmin\images\rightw.gif" />
+    <Content Include="ContentAdmin\images\right_arrow.png" />
+    <Content Include="ContentAdmin\images\search.png" />
+    <Content Include="ContentAdmin\images\smile.png" />
+    <Content Include="ContentAdmin\images\tick.png" />
+    <Content Include="ContentAdmin\images\tick1.png" />
+    <Content Include="ContentAdmin\js\bootstrap.min.js" />
+    <Content Include="ContentAdmin\js\Chart.js" />
+    <Content Include="ContentAdmin\js\jquery-2.1.4.min.js" />
+    <Content Include="ContentAdmin\js\jquery-ui.js" />
+    <Content Include="ContentAdmin\js\jquery.basictable.min.js" />
+    <Content Include="ContentAdmin\js\jquery.jqcandlestick.min.js" />
+    <Content Include="ContentAdmin\js\jquery.nicescroll.js" />
+    <Content Include="ContentAdmin\js\lightbox-plus-jquery.min.js" />
+    <Content Include="ContentAdmin\js\monthly.js" />
+    <Content Include="ContentAdmin\js\morris.js" />
+    <Content Include="ContentAdmin\js\raphael-min.js" />
+    <Content Include="ContentAdmin\js\scripts.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -316,6 +379,48 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\imgBaiViet\1.1.jpg" />
+    <Content Include="Images\imgBaiViet\1.2.jpg" />
+    <Content Include="Images\imgBaiViet\1.3.jpg" />
+    <Content Include="Images\imgBaiViet\1.4.jpg" />
+    <Content Include="Images\imgBaiViet\1.jpg" />
+    <Content Include="Images\imgBaiViet\2.1.jpg" />
+    <Content Include="Images\imgBaiViet\2.2.jpg" />
+    <Content Include="Images\imgBaiViet\2.jpg" />
+    <Content Include="Images\imgBaiViet\3.1.jpg" />
+    <Content Include="Images\imgBaiViet\3.2.jpg" />
+    <Content Include="Images\imgBaiViet\3.3.jpg" />
+    <Content Include="Images\imgBaiViet\3.4.jpg" />
+    <Content Include="Images\imgBaiViet\3.jpg" />
+    <Content Include="Images\imgBaiViet\bv1.jpeg" />
+    <Content Include="Images\imgBaiViet\bv2.1.png" />
+    <Content Include="Images\imgBaiViet\bv2.jpg" />
+    <Content Include="Images\imgBaiViet\bv3.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.1.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.2.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.3.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.4.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.5.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.6.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.7.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.8.jpg" />
+    <Content Include="Images\imgBaiViet\bv5.9.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.1.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.10.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.2.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.3.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.4.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.5.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.6.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.7.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.8.jpg" />
+    <Content Include="Images\imgBaiViet\bv6.9.jpg" />
+    <Content Include="Images\imgBaiViet\do_giay_b1.jpg" />
+    <Content Include="Images\imgBaiViet\do_giay_B2.jpg" />
+    <Content Include="Images\imgBaiViet\Do_giay_b3.jpg" />
+    <Content Include="Images\imgBaiViet\sizegiay-nam.jpg" />
+    <Content Include="Images\imgBaiViet\sizegiay-nu.jpg" />
+    <Content Include="Images\imgBaiViet\Size_giay_da_bong.jpg" />
     <Content Include="Images\imgGiay\adidas_size.png" />
     <Content Include="Images\imgGiay\bb1.jpg" />
     <Content Include="Images\imgGiay\bb10.jpg" />
@@ -436,6 +541,13 @@
       <DependentUpon>QLGIAY.edmx</DependentUpon>
       <LastGenOutput>QLGIAY.cs</LastGenOutput>
     </Content>
+    <Content Include="ContentAdmin\fonts\fontawesome-webfont.eot" />
+    <Content Include="ContentAdmin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="ContentAdmin\fonts\fontawesome-webfont.woff" />
+    <Content Include="ContentAdmin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="ContentAdmin\fonts\FontAwesome.otf" />
+    <Content Include="ContentAdmin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ContentAdmin\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -480,6 +592,9 @@
     <Content Include="Views\Home\_GiayTheThaoPartial.cshtml" />
     <Content Include="Views\Home\_GiayCaoGotPartial.cshtml" />
     <Content Include="Views\Home\_GiaySandalsPartial.cshtml" />
+    <Content Include="Views\Home\LienHe.cshtml" />
+    <Content Include="Views\Admin\DangNhapAdmin.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,41 +3,37 @@
 
 
 <style>
-    #divSPTrangChu {
-        margin: 10px 0px;
+    #imgSPFr {
+       
     }
 </style>
 
 
-<div class="tab1">
-    <div class="col-md-3 product-men">
-        <div class="men-pro-item sismpleCart_shelfItem">
-           @{
-               int i = 0;
-           }
-            @foreach (var item in Model)
-            {
-                i++;
-                <div id="divSPTrangChu">
-                    <div class="men-thumb-item">
-                        <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-front">
-                        <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-back">
-                        <div class="men-cart-pro">
-                            <div class="inner-men-cart-pro">
-                                <a href="@Url.Action("CTSanPham", new { @maGiay=item.MaGiay })" class="link-product-add-cart">Xem nhanh</a>
-                            </div>
+<div class="tab3">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 product-men">
+            <div class="men-pro-item sismpleCart_shelfItem">
+                <div class="men-thumb-item" id="">
+                    <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-front" id="imgSPFr">
+                    <img src="~/Images/imgGiay/@item.HinhMinhHoa" alt="" class="pro-image-back">
+                    <div class="men-cart-pro">
+                        <div class="inner-men-cart-pro">
+                            <a href="@Url.Action("CTSanPham", new { @maGiay=item.MaGiay })" class="link-product-add-cart">Xem nhanh</a>
                         </div>
-                        <span class="product-new-top">New</span>
-
                     </div>
-                    <div class="item-info-product ">
-                        <h4><a href="single.html">@item.TenGiay</a></h4>
-                        <div class="info-product-price">
-                            <span class="item_price">@item.DonGia VNĐ</span>
-                            @*<del>$69.71</del>*@
-                        </div>
+                    <span class="product-new-top">New</span>
 
-                        @*<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                </div>
+
+                <div class="item-info-product ">
+                    <h4><a href="@Url.Action("CTSanPham", new { @maGiay=item.MaGiay })">@item.TenGiay</a></h4>
+                    <div class="info-product-price">
+                        <span class="item_price">@item.DonGia VNĐ</span>
+                        @*<del>$69.71</del>*@
+                    </div>
+
+                    @*<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                             <form action="#" method="post">
                                 <fieldset>
                                     <input type="hidden" name="cmd" value="_cart" />
@@ -53,14 +49,9 @@
                                 </fieldset>
                             </form>
                         </div>*@
-                    </div>
                 </div>
-                if(i%3 == 0) 
-                {
-                    <div style="clear:both"></div>
-                }
-            }
+            </div>
         </div>
-    </div>
-    <div class=""></div>
+        <div class=""></div>
+    }
 </div>

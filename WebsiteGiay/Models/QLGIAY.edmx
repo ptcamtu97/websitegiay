@@ -10,8 +10,9 @@
             <PropertyRef Name="MaBV" />
           </Key>
           <Property Name="MaBV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TieuDe" Type="nvarchar" MaxLength="200" />
           <Property Name="NoiDung" Type="ntext" />
-          <Property Name="MaHinh" Type="int" />
+          <Property Name="MaHinh" Type="varchar" MaxLength="50" />
           <Property Name="MaNV" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="CTHOADON">
@@ -253,8 +254,9 @@
             <PropertyRef Name="MaBV" />
           </Key>
           <Property Name="MaBV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TieuDe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MaHinh" Type="Int32" />
+          <Property Name="MaHinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MaNV" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="NHANVIEN" Relationship="QLGIAYModel.PK_MANV" FromRole="BAIVIET" ToRole="NHANVIEN" />
         </EntityType>
@@ -439,6 +441,7 @@
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="MaHinh" ColumnName="MaHinh" />
                 <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
                 <ScalarProperty Name="MaBV" ColumnName="MaBV" />
               </MappingFragment>
             </EntityTypeMapping>

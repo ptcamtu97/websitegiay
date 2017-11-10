@@ -40,29 +40,36 @@ namespace WebsiteGiay.Controllers
         
         public PartialViewResult _GiayBupBePartial()
         {
-            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GBB").ToList();
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GBB").Take(12).OrderBy(n => n.NgayCapNhat).ToList();
             return PartialView(lstGiay);
         }
 
         public PartialViewResult _GiayTheThaoPartial()
         {
-            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GTT").ToList();
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GTT").Take(12).OrderBy(n => n.NgayCapNhat).ToList();
             return PartialView(lstGiay);
         }
         public PartialViewResult _GiayCaoGotPartial()
         {
-            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GCG").ToList();
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GCG").Take(12).OrderBy(n => n.NgayCapNhat).ToList();
             return PartialView(lstGiay);
         }
         public PartialViewResult _GiaySandalsPartial()
         {
-            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GSD").ToList();
+            var lstGiay = db.GIAYs.Where(n => n.MaLoai == "GSD").Take(12).OrderBy(n => n.NgayCapNhat).ToList();
             return PartialView(lstGiay);
         }
+
         public ActionResult CTSanPham(int maGiay)
         {
             GIAY giay = db.GIAYs.SingleOrDefault(n => n.MaGiay == maGiay);
             return View(giay);
+        }
+
+        //liên hệ
+        public ActionResult LienHe()
+        {
+            return View();
         }
         
     }

@@ -15,8 +15,9 @@ namespace WebsiteGiay.Models
     public partial class BAIVIET
     {
         public int MaBV { get; set; }
+        public string TieuDe { get; set; }
         public string NoiDung { get; set; }
-        public Nullable<int> MaHinh { get; set; }
+        public string MaHinh { get; set; }
         public string MaNV { get; set; }
     
         public virtual NHANVIEN NHANVIEN { get; set; }
